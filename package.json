@@ -1,0 +1,36 @@
+{
+  "name": "lemon",
+  "version": "1.0.0",
+  "description": "Simple landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pavel-Yarakhovich/Lemon.git"
+  },
+  "author": "Pavel Yarakhovich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pavel-Yarakhovich/Lemon/issues"
+  },
+  "homepage": "https://github.com/Pavel-Yarakhovich/Lemon#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-scss": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "normalize.css": "^8.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "magnific-popup": "^1.1.0",
+    "slick-carousel": "^1.8.1"
+  }
+}
