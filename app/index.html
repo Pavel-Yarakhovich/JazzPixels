@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Assistant:300,400,800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.min.css">
 	<script src="js/main.js" defer></script>
 	<title>JazzPixels</title>
@@ -23,36 +23,48 @@
 						<div class="slide__background-next"></div>
 					</div>
 					<h1 class="slide__title">16 <br/>new <br/>events</h1>
-					<p class="slide__description">Open map</p>
+					<a href="#" class="slide__description">Open map</a>
 				</article>
-				<article class="slide slide-second">
+				<article class="slide slide-second slide-unvisible">
 					<p class="slide__upper-description">Hottest</p>
 					<div class="slide__background">
 						<div class="slide__background-current"></div>
 						<div class="slide__background-next"></div>
 					</div>
 					<h1 class="slide__title">Temple <br/>rock</h1>
-					<p class="slide__description">Show details</p>
+					<a href="#" class="slide__description">Show details</a>
 				</article>
-				<article class="slide slide-third">
+				<article class="slide slide-third slide-unvisible">
 					<p class="slide__upper-description">Nearest</p>
 					<div class="slide__background">
 						<div class="slide__background-current"></div>
 						<div class="slide__background-next"></div>
 					</div>
 					<h1 class="slide__title">Drop the <br/>beat 3</h1>
-					<p class="slide__description">Show details</p>
+					<a href="#" class="slide__description">Show details</a>
+				</article>
+				<article class="slide slide-fourth slide-unvisible">
+					<p class="slide__upper-description">Tour</p>
+					<div class="slide__background">
+						<div class="slide__background-current"></div>
+						<div class="slide__background-next"></div>
+					</div>
+					<h1 class="slide__title">Minsk - <br/>Vilnius</h1>
+					<a href="#" class="slide__description">Show tour</a>
 				</article>
 			</div>
 			<div class="slider__toggles">
 				<label class="slider__toggle slider__toggle-active" >
-					<input id="slide-1" type="radio" value="slide-1">
+					<input type="radio" value="0">
 				</label>
 				<label class="slider__toggle">
-					<input id="slide-2" type="radio" value="slide-2">
+					<input name="music" type="radio" value="1">
 				</label>
 				<label class="slider__toggle">
-					<input id="slide-3" type="radio" value="slide-3">
+					<input name="video" type="radio" value="2">
+				</label>
+				<label class="slider__toggle">
+					<input name="event" type="radio" value="3">
 				</label>
 			</div>
 		</section>
@@ -120,13 +132,15 @@
 	</main>
 
 	<footer class="footer">
-		<a class="footer__link main" href="#" target="_self" title="link1">Main</a>
-		<a class="footer__link map" href="#" target="_self" title="link1">
-			<span id="booked-events">0</span>
-			Map
-		</a>
-		<a class="footer__link search" href="#" target="_self" title="link1">Search</a>
-		<a class="footer__link profile" href="#" target="_self" title="link1">Profile</a>
+		<nav class="footer__menu">
+			<a class="footer__link main" href="#" target="_self" title="feed">feed</a>
+			<a class="footer__link events" href="./map.html" target="_self" title="events">
+				<span id="booked-events"></span>
+				events
+			</a>
+			<a class="footer__link search" href="#" target="_self" title="search">search</a>
+			<a class="footer__link profile" href="#" target="_self" title="profile">profile</a>
+		</nav>
 	</footer>
 
 </body>
