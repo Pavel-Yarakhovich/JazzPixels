@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="js/main.js" defer></script>
   <script src="js/mapCustomize.js" defer></script>
   <script src="js/map.js" defer></script>
   <link href="https://fonts.googleapis.com/css?family=Assistant:300,400,800&display=swap" rel="stylesheet">
@@ -12,9 +11,17 @@
 	<title>Map</title>
 </head>
 <body>
-  <main class="content">
+  <main class="content content-map">
+    <div class="page-header events-page-header page-header-hidden">
+      <h2 class="page-header-title">Events</h2>
+      <p class="page-header-subtitle">232 Upcoming Events</p>
+    </div>
+    <div class="page-header location-page-header page-header-hidden">
+      <h2 class="page-header-title">Amsterdam</h2>
+      <p class="page-header-subtitle">Netherlands</p>
+    </div>
     <div class="content__events">
-      <span id="booked-events">276</span>
+      <span id="button_booked-events">276</span>
     </div>
     <div class="content__locations"></div>
 
@@ -56,16 +63,16 @@
   </main>
   <footer class="footer">
     <nav class="footer__menu">
-      <a class="footer__map_link main__map" href="#" target="_self" title="feed">Feed</a>
-      <a class="footer__map_link events__map" href="./map.html" target="_self" title="events">
+      <a id="feed_link" class="footer__map_link main__map" href="./index.html" target="blank" title="Feed">Feed</a>
+      <a id="events_link" class="footer__map_link events__map" href="#" target="_self" title="Events">
         <span id="booked-events">27</span>
           Events
       </a>
-      <a class="footer__map_link search__map" href="#" target="_self" title="search">Search</a>
-      <a class="footer__map_link profile__map" href="#" target="_self" title="profile">Profile</a>
+      <a id="search_link" class="footer__map_link search__map" href="#" target="_self" title="Search">Search</a>
+      <a id="profile_link" class="footer__map_link profile__map" href="#" target="_self" title="Profile">Profile</a>
     </nav>
   </footer>
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo9wzZQVxtKRMs3vDmqNs4G4Vsfh2rV1o&callback=initMap" defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGfCXOpTiah4GY9Q6ABI3AKAbTG0JEdU&callback=initMap" defer></script>
 </body>
 </html>
