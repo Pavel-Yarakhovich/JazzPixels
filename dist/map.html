@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/mapCustomize.js" defer></script>
+  <script src="js/map.js" defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Assistant:300,400,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Map</title>
+</head>
+<body>
+  <main class="content content-map">
+    <div class="page-header events-page-header page-header-hidden">
+      <h2 class="page-header-title">Events</h2>
+      <p class="page-header-subtitle">232 Upcoming Events</p>
+    </div>
+    <div class="page-header location-page-header page-header-hidden">
+      <h2 class="page-header-title">Amsterdam</h2>
+      <p class="page-header-subtitle">Netherlands</p>
+    </div>
+    <div class="content__events">
+      <span id="button_booked-events">276</span>
+    </div>
+    <div class="content__locations"></div>
+
+    <div id="map" class="content__map"></div>
+    <section class="content__articles">
+      <article class="content__article content__article-hidden event">
+        <div class="content__article_bookmark"></div>
+        <div class="content__article_description">
+          <img class="content__article_illustration"  src="img/art_img_4.png">
+          <p class="content__article_title">King or queen of the circle 2018</p>
+          <p class="content__article_text">Houston, United States<br/>13 October</p>
+        </div>
+      </article>
+      <article class="content__article content__article-hidden event">
+        <div class="content__article_bookmark"></div>
+        <div class="content__article_description">
+          <img class="content__article_illustration"  src="img/second_screen_bg.png">
+          <p class="content__article_title">Temple rock: 5 year<br/>anniversary 2018</p>
+          <p class="content__article_text">12 October</p>
+        </div>
+      </article>
+      <article class="content__article content__article-hidden event">
+        <div class="content__article_bookmark"></div>
+        <div class="content__article_description">
+          <img class="content__article_illustration"  src="img/soul_rockerz.png">
+          <p class="content__article_title">Soul Rockerz 20</p>
+          <p class="content__article_text">11 October</p>
+        </div>
+      </article>
+      <article class="content__article content__article-hidden event">
+        <div class="content__article_bookmark"></div>
+        <div class="content__article_description">
+          <img class="content__article_illustration"  src="img/rockland.png">
+          <p class="content__article_title">Rockland's 10 year <br/>hip-hop showcase</p>
+          <p class="content__article_text">Buenos Aires, Argentina <br/>13 October</p>
+        </div>
+      </article>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <nav class="footer__menu">
+      <a id="feed_link" class="footer__map_link main__map" href="./index.html" target="blank" title="Feed">Feed</a>
+      <a id="events_link" class="footer__map_link events__map" href="#" target="_self" title="Events">
+        <span id="booked-events">27</span>
+          Events
+      </a>
+      <a id="search_link" class="footer__map_link search__map" href="#" target="_self" title="Search">Search</a>
+      <a id="profile_link" class="footer__map_link profile__map" href="#" target="_self" title="Profile">Profile</a>
+    </nav>
+  </footer>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGfCXOpTiah4GY9Q6ABI3AKAbTG0JEdU&callback=initMap" defer></script>
+</body>
+</html>

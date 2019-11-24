@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="js/main.js" defer></script>
+	<title>JazzPixels</title>
+</head>
+<body>
+	<main class="main container">
+		<section class="slider">
+			<div class="slides">
+				<article class="slide slide-first">
+					<div class="slide__background">
+						<div class="slide__background-current"></div>
+						<div class="slide__background-next"></div>
+					</div>
+					<h1 class="slide__title slide__title-main"><span>16</span> <br/>new <br/>events</h1>
+					<a href="./map.html" class="slide__description">Open map</a>
+				</article>
+				<article class="slide slide-second slide-unvisible">
+					<p class="slide__upper-description">Hottest</p>
+					<div class="slide__background">
+						<div class="slide__background-current"></div>
+						<div class="slide__background-next"></div>
+					</div>
+					<h1 class="slide__title">Temple <br/>rock</h1>
+					<a href="#" class="slide__description">Show details</a>
+				</article>
+				<article class="slide slide-third slide-unvisible">
+					<p class="slide__upper-description">Nearest</p>
+					<div class="slide__background">
+						<div class="slide__background-current"></div>
+						<div class="slide__background-next"></div>
+					</div>
+					<h1 class="slide__title">Drop the <br/>beat 3</h1>
+					<a href="#" class="slide__description">Show details</a>
+				</article>
+				<article class="slide slide-fourth slide-unvisible">
+					<p class="slide__upper-description">Tour</p>
+					<div class="slide__background">
+						<div class="slide__background-current"></div>
+						<div class="slide__background-next"></div>
+					</div>
+					<h1 class="slide__title">Minsk - <br/>Vilnius</h1>
+					<a href="#" class="slide__description">Show tour</a>
+				</article>
+			</div>
+			<div class="slider__toggles">
+				<label class="slider__toggle slider__toggle-active" >
+					<input type="radio" value="0">
+				</label>
+				<label class="slider__toggle">
+					<input name="music" type="radio" value="1">
+				</label>
+				<label class="slider__toggle">
+					<input name="video" type="radio" value="2">
+				</label>
+				<label class="slider__toggle">
+					<input name="event" type="radio" value="3">
+				</label>
+			</div>
+		</section>
+		<section class="content">
+			<header class="content__header">
+				<h3 class="content__title">Feed</h3>
+			</header>
+			<article id="art1" class="content__article music">
+				<div class="content__article_bookmark"></div>
+				<div class="content__article_description">
+					<img class="content__article_illustration" src="img/art_img_1.png">
+					<p class="content__article_title">Surreal soujia 2</p>
+					<p class="content__article_text">Cashcourt</p>
+				</div>
+			</article>
+			<article class="content__article music">
+				<div class="content__article_bookmark"></div>
+				<div class="content__article_description">
+					<img class="content__article_illustration" src="img/art_img_2.png">
+					<p class="content__article_title">645AR - Workin ft. 10kDug...</p>
+					<p class="content__article_text">Beez Exclusivez</p>
+				</div>
+			</article>
+			<article class="content__article video">
+				<div class="content__article_bookmark"></div>
+				<div class="content__article_description">
+					<img class="content__article_illustration" src="img/art_img_3.png">
+					<p class="content__article_title">Final battle: Issei VS Hong 10 Red Bull BC One..</p>
+					<p class="content__article_text">48:23</p>
+				</div>
+			</article>
+			<article class="content__article event booked">
+				<div class="content__article_bookmark"></div>
+				<p class="content__article_recomendation"><span>Bboy Event</span> recommends an event</p>
+				<div class="content__article_description">
+					<img class="content__article_illustration"  src="img/art_img_4.png">
+					<p class="content__article_title">King or queen of the circle 2018</p>
+					<p class="content__article_text">Houston, United States <br/>13 October</p>
+				</div>
+			</article>
+			<article class="content__article music booked">
+				<div class="content__article_bookmark"></div>
+				<div class="content__article_description">
+					<img class="content__article_illustration" src="img/art_img_5.png">
+					<p class="content__article_title">kai$oundz & Lil Gucci Le...</p>
+					<p class="content__article_text">kai$oundz</p>
+				</div>
+			</article>
+			<article class="content__article music booked">
+				<div class="content__article_bookmark"></div>
+				<div class="content__article_description">
+					<img class="content__article_illustration" src="img/art_img_1.png">
+					<p class="content__article_title">Surreal soujia 2</p>
+					<p class="content__article_text">Cashcourt</p>
+				</div>
+			</article>
+			<article class="content__article video">
+				<div class="content__article_bookmark"></div>
+				<div class="content__article_description">
+					<img class="content__article_illustration" src="img/art_img_7.png">
+					<p class="content__article_title">Final battle: Issei VS Hong 10 Red Bull BC One..</p>
+					<p class="content__article_text">48:23</p>
+				</div>
+			</article>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<nav class="footer__menu">
+			<a class="footer__link main" href="#" target="_self" title="Feed">Feed</a>
+			<a class="footer__link events" href="./map.html" target="_self" title="Events">
+				<span id="booked-events"></span>
+				Events
+			</a>
+			<a class="footer__link search" href="#" target="_self" title="Search">Search</a>
+			<a class="footer__link profile" href="#" target="_self" title="Profile">Profile</a>
+		</nav>
+	</footer>
+
+</body>
+</html>
