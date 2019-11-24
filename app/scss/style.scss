@@ -80,6 +80,7 @@ input[type="radio"] {
 
 html {
 	background: $bg-black;
+	width: 100vw;
 }
 
 body {
@@ -443,7 +444,7 @@ body {
 	position: absolute;
 	height: 128px;
 	width: 100%;
-	left: 0;
+	top: 0;
 	padding-left: 24px;
 	box-sizing: border-box;
 	@include flex(center);
@@ -452,7 +453,7 @@ body {
 	transition: left .3s ease-out;
 
 	&-hidden {
-		left: -100%;
+		top: -200%;
 	}
 
 	&-title {
