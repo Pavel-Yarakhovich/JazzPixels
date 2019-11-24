@@ -10,25 +10,30 @@ const checkEvents = () => {
 }
 
 articles.forEach(art => art.addEventListener('click', (e) => {
-	e.target.className === 'content__article_bookmark'
-	? art.classList.toggle('booked')
-	: null
 
-	e.target.className === 'content__article_bookmark' && art.classList.contains('booked-displayed')
-		? art.classList.remove('booked-displayed')
-		: null
-
-	art.classList.contains('event')
-	? art.classList.contains('booked')
-		? events++
-		: events--
-	: null
-
-	if ( events > 0 ) {
-		bookedEvents.classList.add('booked-events');
-		bookedEvents.textContent = events;
+	if (art.classList.contains('booked')) {
+		if (e.target.className === 'content__article_bookmark') {
+			art.classList.remove('booked');
+		}
 	} else {
-		bookedEvents.classList.remove('booked-events')
+		if (art.classList.contains('music')) {
+			art.classList.add('booked-displayed-music');
+			setTimeout(()=> {
+				art.classList.remove('booked-displayed-music');
+			}, 1000);
+			setTimeout(()=> {
+				art.classList.add('booked');
+			}, 1010);
+			
+		} else {
+			art.classList.add('booked-displayed');
+			setTimeout(()=> {
+				art.classList.remove('booked-displayed');
+			}, 1000);
+			setTimeout(()=> {
+				art.classList.add('booked');
+			}, 1010);
+		}
 	}
 }) )
 
@@ -49,10 +54,14 @@ const toggleSlides = (e) => {
 	articles.forEach(art => {
 		art.classList.remove('content__article-hidden');
 		art.classList.remove('booked-displayed');
+		art.classList.remove('booked-displayed-music');
 		e.target.name && !art.classList.contains(e.target.name)
-			? art.classList.add('content__article-hidden') : 
-			art.classList.contains('booked') && e.target.name
-				? art.classList.add('booked-displayed') : null;
+			? art.classList.add('content__article-hidden') 
+			: art.classList.contains('booked') && e.target.name === 'music'
+				? art.classList.add('booked-displayed-music') 
+				: art.classList.contains('booked') && e.target.name
+					? art.classList.add('booked-displayed')
+					: null
 	})
 };
 

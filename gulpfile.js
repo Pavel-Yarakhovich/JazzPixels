@@ -7,8 +7,6 @@ let gulp = require('gulp'),
     del = require('del'),
     autoprefixer = require('gulp-autoprefixer');
 
-
-
 gulp.task('scss', function(){
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))

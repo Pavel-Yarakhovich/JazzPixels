@@ -5,8 +5,10 @@ const eventsLink = document.querySelector('#events_link');
 const linkNumberOfNewEvents = document.querySelector('#booked-events');
 const buttonNumberOfNewEvents = document.querySelector('#button_booked-events');
 const pageHeaders = document.querySelectorAll('.page-header');
-let currentLink = '';
 const articles = document.querySelectorAll('.content__article');
+const contentMap = document.querySelector('.content-map');
+
+let currentLink = '';
 let newEvents;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const expandNewEvents = () => {
+	pageHeaders.forEach(header => {
+		header.classList.add('page-header-hidden');
+	})
 	articles.forEach((art, i) => {
 		setTimeout(() => {
 			art.classList.remove('content__article-hidden')
@@ -24,13 +29,13 @@ const expandNewEvents = () => {
 	})
 	eventsButton.classList.add('hidden');
 	locationsButton.classList.add('hidden');
-	pageHeaders[0].classList.remove('page-header-hidden');
+	contentMap.classList.add('content-map-opened');
 }
 
 const showHeader = () => {
-		!currentLink === 'events_link'
+		currentLink === 'events_link'
 			? pageHeaders[0].classList.remove('page-header-hidden')
-			: null
+			: pageHeaders[0].classList.add('page-header-hidden')
 }
 
 const togglePages = (e) => {
@@ -41,9 +46,8 @@ const togglePages = (e) => {
 	showHeader();
 }
 
-
-articles.forEach(art => art.addEventListener('click', () => {
-	if (art.classList.contains('event-new')) {
+articles.forEach(art => art.addEventListener('click', (e) => {
+	if (art.classList.contains('event-new')) { 
 		art.classList.remove('event-new');
 		art.classList.add('booked-displayed');
 		setTimeout(()=> {
@@ -53,12 +57,23 @@ articles.forEach(art => art.addEventListener('click', () => {
 		newEvents--;
 		linkNumberOfNewEvents.textContent = newEvents;
 		buttonNumberOfNewEvents.textContent = newEvents;
+	} else {
+		art.classList.contains('booked') &&
+		e.target.className === 'content__article_bookmark'
+			? art.classList.remove('booked')
+			: null
 	}
 }));
 
-eventsButton.addEventListener('click', expandNewEvents);
+eventsButton.addEventListener('click', () => {
+	expandNewEvents();
+	pageHeaders[0].classList.remove('page-header-hidden');
+});
+locationsButton.addEventListener('click', () => {
+	expandNewEvents();
+	pageHeaders[1].classList.remove('page-header-hidden');
+});
 eventsLink.addEventListener('click', expandNewEvents);
-
 
 footerLinks.forEach(link => 
 	link.addEventListener('click', togglePages)

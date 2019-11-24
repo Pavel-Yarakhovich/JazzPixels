@@ -21,7 +21,7 @@
         position: {lat: 47.330000, lng: 8.520000},
         map: map,
         animation: google.maps.Animation.DROP,
-        icon: 'img/map_pin.png'
+        icon: 'img/map_pin-active.png'
       }
     );
 
